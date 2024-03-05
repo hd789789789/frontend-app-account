@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import {
   Form, StatefulButton, ModalDialog, ActionRow, useToggle, Button,
-} from '@openedx/paragon';
+} from '@edx/paragon';
 import React, { useCallback, useEffect, useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import messages from './AccountSettingsPage.messages';

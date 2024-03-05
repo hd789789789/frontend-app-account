@@ -7,7 +7,7 @@ import {
   Form,
   ModalDialog,
   StatefulButton,
-} from '@openedx/paragon';
+} from '@edx/paragon';
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 
 import {

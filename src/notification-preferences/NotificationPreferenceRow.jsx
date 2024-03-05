@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl } from '@edx/frontend-platform/i18n';
-import { Icon, OverlayTrigger, Tooltip } from '@openedx/paragon';
-import { InfoOutline } from '@openedx/paragon/icons';
-import messages from './messages';
+import { Icon, OverlayTrigger, Tooltip } from '@edx/paragon';
+import { InfoOutline } from '@edx/paragon/icons';
+import { messages } from './messages';
 import ToggleSwitch from './ToggleSwitch';
 import {
   selectPreference,
   selectPreferenceNonEditableChannels,
   selectSelectedCourseId,
-  selectUpdatePreferencesStatus,
+  selectNotificationPreferencesStatus,
 } from './data/selectors';
-import NOTIFICATION_CHANNELS from './data/constants';
 import { updatePreferenceToggle } from './data/thunks';
 import { LOADING_STATUS } from '../constants';
 
@@ -23,7 +22,7 @@ const NotificationPreferenceRow = ({ appId, preferenceName }) => {
   const courseId = useSelector(selectSelectedCourseId());
   const preference = useSelector(selectPreference(appId, preferenceName));
   const nonEditable = useSelector(selectPreferenceNonEditableChannels(appId, preferenceName));
-  const updatePreferencesStatus = useSelector(selectUpdatePreferencesStatus());
+  const preferencesStatus = useSelector(selectNotificationPreferencesStatus());
 
   const onToggle = useCallback((event) => {
     const {
@@ -54,7 +53,7 @@ const NotificationPreferenceRow = ({ appId, preferenceName }) => {
               <Tooltip id={tooltipId}>
                 {preference.info}
               </Tooltip>
-            )}
+                )}
           >
             <span className="ml-2">
               <Icon src={InfoOutline} />
@@ -63,7 +62,7 @@ const NotificationPreferenceRow = ({ appId, preferenceName }) => {
         )}
       </div>
       <div className="d-flex align-items-center">
-        {NOTIFICATION_CHANNELS.map((channel) => (
+        {['web'].map((channel) => (
           <div
             id={`${preferenceName}-${channel}`}
             className={classNames(
@@ -77,8 +76,7 @@ const NotificationPreferenceRow = ({ appId, preferenceName }) => {
               name={channel}
               value={preference[channel]}
               onChange={onToggle}
-              disabled={nonEditable.includes(channel) || updatePreferencesStatus === LOADING_STATUS}
-              id={`${preferenceName}-${channel}`}
+              disabled={nonEditable.includes(channel) || preferencesStatus === LOADING_STATUS}
             />
           </div>
         ))}

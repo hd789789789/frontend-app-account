@@ -13,7 +13,7 @@ import {
   Form,
   ModalDialog,
   StatefulButton,
-} from '@openedx/paragon';
+} from '@edx/paragon';
 
 import { closeForm, saveSettingsReset } from '../data/actions';
 import { nameChangeSelector } from '../data/selectors';

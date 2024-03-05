@@ -5,7 +5,7 @@ import {
   intlShape,
 } from '@edx/frontend-platform/i18n';
 
-import { Hyperlink, Form } from '@openedx/paragon';
+import { Hyperlink, Form } from '@edx/paragon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';

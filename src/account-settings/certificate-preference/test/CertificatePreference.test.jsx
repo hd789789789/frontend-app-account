@@ -151,7 +151,7 @@ describe('NameChange', () => {
     const submitButton = screen.getByText('Choose name');
     fireEvent.click(submitButton);
     expect(mockDispatch).toHaveBeenCalledWith({
-      payload: { formId, commitValues: false, extendedProfile: {} },
+      payload: { formId, commitValues: false },
       type: 'ACCOUNT_SETTINGS__SAVE_SETTINGS',
     });
   });

@@ -31,7 +31,7 @@ subscribe(APP_READY, () => {
         <Route element={(
           <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
             <Header />
-            <main className="flex-grow-1" id="main">
+            <main className="flex-grow-1">
               <Outlet />
             </main>
             <Footer />

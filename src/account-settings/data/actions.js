@@ -77,9 +77,9 @@ export const beginNameChange = (formId) => ({
 });
 // SAVE SETTINGS ACTIONS
 
-export const saveSettings = (formId, commitValues, extendedProfile = {}) => ({
+export const saveSettings = (formId, commitValues) => ({
   type: SAVE_SETTINGS.BASE,
-  payload: { formId, commitValues, extendedProfile },
+  payload: { formId, commitValues },
 });
 
 export const saveSettingsBegin = () => ({

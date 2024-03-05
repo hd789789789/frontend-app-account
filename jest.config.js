@@ -1,4 +1,4 @@
-const { createConfig } = require('@openedx/frontend-build');
+const { createConfig } = require('@edx/frontend-build');
 
 module.exports = createConfig('jest', {
   setupFilesAfterEnv: [

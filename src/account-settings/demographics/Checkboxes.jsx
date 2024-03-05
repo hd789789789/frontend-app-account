@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Form } from '@openedx/paragon';
+import { Form } from '@edx/paragon';
 import { DECLINED } from '../data/constants';
 
 const Checkboxes = (props) => {
