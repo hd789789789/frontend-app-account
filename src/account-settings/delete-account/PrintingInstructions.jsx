@@ -23,7 +23,7 @@ const PrintingInstructions = (props) => {
     return (
       <FormattedMessage
         id="account.settings.delete.account.text.3.edX"
-        defaultMessage="You may also lose access to verified certificates and other program credentials like MicroMasters certificates. You can make a copy of these for your records before proceeding with deletion. {actionLink}."
+        defaultMessage="Bạn cũng có thể mất quyền truy cập vào chứng chỉ đã xác minh và các chứng chỉ chương trình khác như chứng chỉ MicroMasters. Bạn có thể sao chép các chứng chỉ này để lưu trữ trước khi tiếp tục xóa. {actionLink}."
         description="A message in the user account deletion area warning users that deleting their account will prevent them from accessing their certificates. 'actionLink' is a HTML link with a full sentence that describes how to print a certificate."
         values={{ actionLink }}
       />
@@ -33,7 +33,7 @@ const PrintingInstructions = (props) => {
   return (
     <FormattedMessage
       id="account.settings.delete.account.text.3"
-      defaultMessage="You may also lose access to verified certificates and other program credentials. You can make a copy of these for your records before proceeding with deletion."
+      defaultMessage="Bạn cũng có thể mất quyền truy cập vào chứng chỉ đã xác minh và các chứng chỉ chương trình khác. Bạn có thể sao chép các chứng chỉ này để lưu trữ trước khi tiếp tục xóa."
       description="A message in the user account deletion area warning users that deleting their account will prevent them from accessing their certificates."
       values={{ actionLink }}
     />

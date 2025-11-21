@@ -34,7 +34,7 @@ const ReviewRequirementsPanel = (props) => {
         <Alert className="alert alert-primary" role="alert">
           <FormattedMessage
             id="id.verification.requirements.account.managed.alert"
-            defaultMessage="Your account settings are managed by {managerTitle}. If the name on your photo ID does not match the name on your account, please contact your {profileDataManager} administrator or {support} for help before completing the Photo Verification process."
+            defaultMessage="Cài đặt tài khoản của bạn được quản lý bởi {managerTitle}. Nếu tên trên giấy tờ tùy thân có ảnh của bạn không khớp với tên trên tài khoản của bạn, vui lòng liên hệ quản trị viên {profileDataManager} của bạn hoặc {support} để được trợ giúp trước khi hoàn thành quy trình xác minh ảnh."
             description="Alert message informing the user their account data is managed by a third party."
             values={{
               managerTitle: <strong>{profileDataManager}</strong>,
@@ -69,7 +69,7 @@ const ReviewRequirementsPanel = (props) => {
           <p className="mb-0">
             <FormattedMessage
               id="id.verification.requirements.card.device.text"
-              defaultMessage="You need a device that has a camera. If you receive a browser prompt for access to your camera, please make sure to click {allow}."
+              defaultMessage="Bạn cần thiết bị có camera. Nếu bạn nhận được lời nhắc từ trình duyệt để truy cập camera của bạn, vui lòng đảm bảo nhấp vào {allow}."
               description="Text explaining that the user needs access to a camera."
               values={{
                 allow: <strong>{props.intl.formatMessage(messages['id.verification.requirements.card.device.allow'])}</strong>,
