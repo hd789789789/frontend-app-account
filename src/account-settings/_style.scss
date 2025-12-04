@@ -1,4 +1,46 @@
 .page__account-settings {
+  background: #f5f7fb;
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .row {
+    row-gap: 1.5rem;
+  }
+
+  .account-section,
+  #notifications {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+  }
+
+  .account-section + .account-section {
+    margin-top: 1.5rem;
+  }
+
+  .section-heading {
+    font-weight: 600;
+  }
+
+  .jump-nav__card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+  }
+
+  .jump-nav__title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
   .form-group {
     margin-bottom: 1.5rem;
   }
@@ -42,5 +84,24 @@
   .grayed-out{
     opacity: 0.6; /* Real browsers */
     filter: alpha(opacity = 60); /* MSIE */
+  }
+}
+
+// Dark theme polish for account settings page
+.dark-theme {
+  .page__account-settings {
+    background: #0a0e1a;
+
+    .account-section,
+    #notifications,
+    .jump-nav__card {
+      background: #1f2937;
+      border-color: #374151;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .jump-nav__title {
+      color: #9ca3af !important;
+    }
   }
 }

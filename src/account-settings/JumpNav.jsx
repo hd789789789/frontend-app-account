@@ -14,6 +14,10 @@ const JumpNav = ({
 
   return (
     <div className={classNames('jump-nav px-2.25', { 'jump-nav-sm position-sticky pt-3': stickToTop })}>
+      <div className="jump-nav__card shadow-sm">
+        <div className="jump-nav__title text-uppercase text-muted mb-3">
+          Cài đặt tài khoản
+        </div>
       <Scrollspy
         items={[
           'basic-information',
@@ -67,6 +71,7 @@ const JumpNav = ({
           </li>
           )}
       </Scrollspy>
+      </div>
     </div>
   );
 };
