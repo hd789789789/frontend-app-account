@@ -78,7 +78,7 @@
   }
 
   .jump-nav-sm {
-    top: 1rem;
+    top: 88px; // Offset từ header sticky (thường ~64-72px) + padding
   }
 
   .jump-nav {
